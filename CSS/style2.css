@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to top, #008fb3, #003cff);
+    background: linear-gradient(to left, #000000, #000000);
     align-items: center;
 }
 
@@ -26,19 +26,23 @@ nav li {
     
 }
 a.read-more
-
 {
     background: linear-gradient(to right, #000000, #000000);
     border-radius: 20px;
     padding: 20px;
     color: #fff;
     text-decoration: none;
-    animation-name: paradireita;
-    animation-duration: 5s;
-    animation-delay: 1s;
     cursor: help;
 
 }
+a.read-more:hover
+{
+    background: linear-gradient(to right, #0078e9, #01c268);
+    animation-name: botaomudando;
+    animation-duration: 2s;
+
+}
+
 nav a {
     color: #ffffff;
     text-decoration: none;
@@ -52,19 +56,22 @@ nav a {
 .logo img {
     width: 100px;
     height: 100px;
+    image-resolution: auto;
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
+    display: fixed;
+    flex-wrap: none;
     justify-content: center;
     padding: 20px;
     flex-flow: column wrap;
-
 }
 
 .highlight {
     background: linear-gradient(to right, #fa14e7, #280acf);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     margin-bottom: 20px;
     animation-name: paracentro;
@@ -73,9 +80,13 @@ main {
 }
 
 .highlight2 {
-    background: linear-gradient(to right, #4955c5de, #027a9e);
+    background: linear-gradient(to right, #0718aade, #027a9e);
+    max-width: 800px;
+    max-height: 800px;
     padding: 20px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     animation-name: paradireita;
     animation-duration: 5s;
     border-radius: 20px;
@@ -102,7 +113,7 @@ main {
 }
 
 .highlight h2 {
-    margin-top: 0;
+    margin-top: center;
 }
 
 .highlight article {
@@ -138,9 +149,18 @@ main {
       opacity: 0;
     }
     100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
       opacity: 1;
     }
   }
-  
+  @keyframes botaomudando {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
